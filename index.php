@@ -30,6 +30,7 @@
           <li><a href='controllers/contactanos.php'>Contactanos</a></li>
            <li><a href='controllers/ayuda.php'>Ayuda</a></li>
            <?php
+		   //Index
            session_start();
            if(!isset($_SESSION['user'])){
                 echo " <li><a href='controllers/login.php'>Login</a></li>";
