@@ -1,0 +1,70 @@
+#next1{
+
+	margin-top:5%;
+	margin-left:10%;
+	border: 2px solid #222831;
+	
+	background-image:url("../img/puedeser.jpg");
+	background-repeat: no-repeat;
+	
+	position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+	
+	width: 80%;
+    opacity: 0.95;
+
+}
+
+#next1 h1{
+
+	text-align:center;
+	color:#222831;
+	font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight:bold;
+	margin-top:1%;
+	margin-bottom:1%;
+	
+}
+
+#next2{
+
+	margin-top:1%;
+	margin-bottom:100px;
+	margin-left: 10%;
+	border: 2px solid #222831;
+	
+	background-image:url("../img/puedeser.jpg");
+	background-repeat: no-repeat;
+	
+	position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+	
+	width: 80%;
+    opacity: 0.95;
+
+}
+
+#contnext2 {
+	
+	text-align: center;
+	width: 100%;
+	height:80%;
+	color: #222831;
+	font-weight:bold;
+	font-size: 16px;
+
+}

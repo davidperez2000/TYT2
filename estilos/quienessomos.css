@@ -1,0 +1,30 @@
+#Quienes{
+
+	margin-top:10px;
+	margin-bottom:100px;
+	margin-left: 10%;
+	border: 2px solid #222831;
+	
+	position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+	
+	width: 80%;
+    opacity: 0.95;
+
+}
+
+#Quienes p {
+
+	margin-top: 2%;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 2%;
+
+}

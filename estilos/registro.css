@@ -1,0 +1,50 @@
+body {
+	
+	margin-top:5%;
+	text-align: center;
+	width: 100%;
+	height:80%;
+	color: #222831;
+	font-weight:bold;
+	font-size: 16px;
+	background-image:url("../img/puedeser.jpg");
+	
+}
+
+h1{
+	
+	color: #222831;
+	font-size: 55px;
+	font-weight:bold;
+	
+}
+
+a {
+	
+	color:#222831;
+	font-weight:bold;
+	
+}
+
+#reg1 {
+	
+	float:left;
+	width: 20%;
+	margin-left:30%;
+	
+}
+
+#reg2 {
+	
+	float:right;
+	width: 20%;
+	margin-right:30%;
+	
+}
+
+#reg3 {
+	
+	float:left;
+	width: 100%;
+	
+}

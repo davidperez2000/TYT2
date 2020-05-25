@@ -1,0 +1,31 @@
+#Ayuda{
+    
+	margin-top:30px;
+	margin-left: 10%;
+	border: 2px solid #222831;
+	
+	position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+	
+	width: 80%;
+    opacity: 0.95;
+	
+	
+}
+
+#chat{ 
+    left:5%;
+    position: relative;
+    width: 95%;
+    height: 300px;
+    font-size: 12pt;
+    text-align: left;
+    overflow:auto;
+}
