@@ -72,7 +72,7 @@ if (!isset($_POST) || empty($_POST)) {
 	
 			</br>
 	
-    <form action="" method="post">
+    <form action="" method="post" onsubmit="return verificar();">
 	
     <div id="reg1">
 	
@@ -105,7 +105,7 @@ if (!isset($_POST) || empty($_POST)) {
             </div>
 			</br>
             <div>
-            <p>Email</p> <input class="inpt" type="mail" title="Introduzca su Email" name="email" required>
+            <p>Email</p> <input class="inpt" type="email" title="Introduzca su Email" name="email" required>
             </div>
 			</br>
             <div>
@@ -113,7 +113,7 @@ if (!isset($_POST) || empty($_POST)) {
             </div>
 			</br>
             <div>
-            <p>Codigo Postal</p> <input class="inpt" type="text" title="Introduzca su Codigo Postal" name="cp" id="cp"  required>
+            <p>Codigo Postal</p> <input class="inpt" type="text" title="Introduzca su Codigo Postal" name="cp" id="cp" pattern="((0[1-9]|5[0-2])|[1-4][0-9])[0-9]{3}"  required>
             </div>
             </BR></BR>
 	
@@ -127,7 +127,23 @@ if (!isset($_POST) || empty($_POST)) {
 	</div>
 
 	</form>
-
+  <script>
+	
+	function verificar(){
+		verdad=true;
+	var fecha = new Date();
+	var fecha2 = document.getElementById("fecha").value;
+	 fecha2= new Date(fecha2);
+	 hoy = new Date()
+	ed = parseInt((fecha - fecha2)/365/24/60/60/1000)
+	if (ed < 18) {
+	alert("Error en la fecha");
+	verdad=false;
+	}
+return verdad;
+}
+		
+		</script>
 	</div>
 	
 	<footer id="fut">
@@ -170,12 +186,15 @@ if (!isset($_POST) || empty($_POST)) {
       if ($resul==true) {
         $_SESSION['user']=$DNI;
         $_SESSION['nombre']=$user;
+        $fp = fopen("../views/conectados.txt",'a');
+        fwrite($fp, $user.PHP_EOL);
+        fclose($fp);   
 	$subject="Travel and time Registro ";
 	$body="Su usuario ha sido registrado ";
-	requiere("correo.php");
+	include("correo.php");
       }else {
-        eliminarerror($DNI,$db);
-	requiere("registro.php");
+
+	echo "<script type='text/javascript'>location.href='registro.php';</script>";
       }  
 }
 
