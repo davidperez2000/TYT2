@@ -2,7 +2,6 @@
     
 	margin-top:30px;
 	margin-left: 10%;
-	border: 2px solid #222831;
 	
 	position: relative;
     display: -ms-flexbox;
@@ -15,8 +14,9 @@
     background-clip: border-box;
 	
 	width: 80%;
-    opacity: 0.95;
+    opacity: 0.85;
 	
+	border-radius: 5px;
 	
 }
 
@@ -29,3 +29,36 @@
     text-align: left;
     overflow:auto;
 }
+
+#msg {
+	
+	margin-left: 0.5%;
+	
+}
+
+.Bienvenido {
+	
+	margin-top: 0.5%;
+	margin-left: 0.5%;
+	
+}
+
+#conectados {
+	
+	margin-left: 0.5%;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

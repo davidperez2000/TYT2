@@ -1,134 +1,55 @@
-.head {
+#todo {
 	
-    color:white;
-    text-align: center;
-    background-color:#222831;
-    height: 80px;
+	position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+	
+	width: 100%;
+    opacity: 0.95;
 	
 }
 
-header h1 {
+.navbar.navbar-expand-lg.navbar-light {
 	
-	margin-top:15px;
+	background-color: #222831;
+}
+
+.nav-item {
 	
+	color:white;
+	padding-right: .5rem;
+	padding-left: .5rem;
 }
 
 body {
 
     font-size: 12pt;
-	background-image:url("../img/stoestaguapo.jpg");
+	width:100%;
+	height:100%;
+	
+	background-image:url("../img/cielo.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	height:100%;
-}
-
-nav div {
-	float:right;
-	margin:15px 10px 10px 10px;
-}
-
-div header{
 	
-    float: left;
-	margin:0px 10px 10px 30px;
-	font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	height:50px;
 }
 
-menu {
-font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-padding: 20px 50px 150px;
-font-size: 13px;
-text-align: center;
-text-decoration:none;
-background: #f4778e;
-position: relative;
-z-index: 1;
+article {
+	
+	width:100%;
+	height:100%;
+	
 }
-
-.menu ul {
-text-align: left;
-display: inline;
-margin: 0;
-padding: 15px 4px 17px 0;
-list-style: none;
-}
-
-.menu a {
-text-align: left;
-display: inline;
-margin: 0;
-padding: 0px 4px 0px 0;
-list-style: none; 
-text-decoration:none;
-color: white;
-font-size: 15px;
-}
-.menu a:link { 
-text-decoration:none;
-color: #000;
-}
-.menu ul li {
-font: normal 12px/18px sans-serif;
-display: inline-block;
-margin-right: -4px;
-position: relative;
-padding: 15px 20px;
-background: #333333; 
-cursor: pointer;
--webkit-transition: all 0.2s; 
--moz-transition: all 0.2s;
--ms-transition: all 0.2s;
--o-transition: all 0.2s;
-transition: all 0.2s;
-}
-.menu ul li:hover {
-background: #347474; 
-color: #fff; 
-position: relative;
-z-index: 1;
-}
-.menu li:hover a { 
-  border-bottom-color: orange;
-}
-.menu li:hover a { 
-  color:#fff; 
-}
-.menu ul li ul {
-padding: 0;
-position: absolute;
-top: 48px;
-left:0;
-width: 150px;
-display: inline; 
-opacity: 0;
-visibility: hidden;
--webkit-transiton: opacity 0.2s; 
--moz-transition: opacity 0.2s;
--ms-transition: opacity 0.2s;
--o-transition: opacity 0.2s;
--transition: opacity 0.2s;
-}
-
-.menu ul li ul li { 
-background: #233c63; 
-display:block;
-color: #fff;
-}
-
-.menu ul li ul li:hover { background: #83a5db; } 
-ul li:hover ul {
-display: inline;
-opacity: 1;
-visibility: visible;
-}
-
 
 #Calendario {
 
 	margin-top:10px;
-	margin-bottom:100px;
-	margin-left: 10%;
+	margin-left:10%;
+	margin-bottom:5px;
 	border: 2px solid #222831;
 	
 	position: relative;
@@ -141,37 +62,47 @@ visibility: visible;
     background-color: #222831;
     background-clip: border-box;
 	
-	width: 80%;
     opacity: 0.95;
 	
-	height:600px;
+	height:100%;
 	
 	background-image:url("../img/toweno.jpg");
 	background-repeat: no-repeat;
+	
+	border-radius: 10px;
+	
+	width:80%;
 	
 }
 
 #eligeviaje {
 	
-   color:white;
-   text-align:center;
-   font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-   margin-top: 40px;
-   font-weight: bold;
-   font-size: 40px;
+  color:white;
+  text-align:center;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 40px;
+  
+  text-shadow: 5px 5px 5px black;
    
 }
 
 #viaje3 {
 	
-   margin:15px 100px 100px 100px;
-   text-align:justify;
-   height:210px;
-   font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-   color: white;
-   font-size: 20px;
-   font-weight: bold;
    
+   text-align:justify;
+   height:100%;
+   font-family:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+   color: white;
+   font-size: 17px;
+   
+}
+
+#viaje3 p  {
+	
+	text-shadow: 5px 5px 5px black;
+
 }
 
 #viaje3 form {
@@ -180,44 +111,14 @@ visibility: visible;
  
 }
 
-#carrusel {
-	
-	margin-top:10px;
-	margin-bottom:100px;
-	margin-left: 10%;
-	border: 2px solid #222831;
-	
-	position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-	
-	width: 80%;
-    opacity: 0.95;
-    
-}
-	
-#carrusel img {
-	
-	width:100%;
-	height:100%;
-	
-}
-
-
 #fut {
 	
-	margin-top:10%;
+	margin-top:100px;
 	width: 100%;
 	margin-bottom:0px;
 	height: 100%;
-	background-color:#1A1A1A;
 	display: block;
+	font-family:"Geomanist";
 	
 }
 
@@ -227,10 +128,7 @@ visibility: visible;
 	margin: auto;
 	padding: 5px;
 	text-align: center;
-	border-left: 1px solid #fff;
-	border-right: 1px solid #fff;
-	background-color:#222831;
-	color:white;
+	color:#222831;
 	font-weight:bold;
 	
 }
@@ -250,17 +148,36 @@ visibility: visible;
 	
 }
 
-img{
+#fut img {
 	
     width: 50px;
     height:	50px;
-	border: 2px solid #222831;
 
 }
 
+.inpt {
+	
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px;
+	
+}
 
+.po {
+	
+	-webkit-text-stroke: 0.3px black;
+	font-weight:bold;
+	color:white;
+	
+}
 
-
+.po a {
+	
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px;
+	font-weight:bold;
+	border:0;
+	
+}
 
 
 
