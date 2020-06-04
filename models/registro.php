@@ -21,6 +21,7 @@ $email = mysqli_fetch_assoc($res2);
 	$sql2="INSERT INTO usulog values('$user','$pass','$DNI','1')";
     $resultado=mysqli_query($db, $sql2);
     }else {
+		$resultado=false;
 	$sql2="DELETE from usuariosreg where dni='$DNI'";
     mysqli_query($db, $sql2);
 	}

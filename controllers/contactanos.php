@@ -83,7 +83,7 @@
 	
 		<div id="fut1">
 		
-			<p> - Realizado por <a href='index.php'>TravelandTime</a> | Copyright ©2020 -  <h6>TODOS LOS DERECHOS RESERVADOS.</h6> </p>
+			<p> - Realizado por <a href='../index.php'>TravelandTime</a> | Copyright ©2020 -  <h6>TODOS LOS DERECHOS RESERVADOS.</h6> </p>
 			
 			<div id="redes">
 		
