@@ -2,21 +2,10 @@
 <html lang="es">
 
 <head>
-<?php
-include("../db/conexion.php");
-session_start();
-if(!isset($_SESSION['DNI'])){
-if (!isset($_POST) || empty($_POST)) { 
-    require_once("../views/login.php");
-    ?>
-    <html>
-    <head>
-
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title> Travel and Time - Login </title>
-		<meta charset="UTF-8" name="author" content="Travel and Time">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title> Travel and Time - Viajes </title>
+    <meta charset="UTF-8" name="author" content="Travel and Time">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -26,12 +15,13 @@ if (!isset($_POST) || empty($_POST)) {
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	
     <link rel="stylesheet" href="../estilos/index.css">
-    <link rel="stylesheet" href="../estilos/login.css">
-		
-    </head>
-    
-    <body>
+    <link rel="stylesheet" href="../estilos/viajes.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
 	
+</head>
+
+<body>
+
 	<div id="todo">
 
     <div class="hed">
@@ -48,6 +38,8 @@ if (!isset($_POST) || empty($_POST)) {
 		<a class="nav-item" href='../controllers/contactanos.php'>Contactanos</a>
 		<a class="nav-item" href='../controllers/ayuda.php'>Ayuda</a>
 		 <?php
+		   //Index
+           session_start();
            if(!isset($_SESSION['user'])){
                 echo " <a class='nav-item' href='../controllers/login.php'>Login</a>";
             }else {
@@ -62,38 +54,76 @@ if (!isset($_POST) || empty($_POST)) {
 		
     </div>
 	
+    <main>
 	
-	<div id="divent">
-	
-	<div id="divlog">
-	
-    <h1>LOGIN</h1>
-	
-	</BR>
-	
-    <form action="" method="post">
-		<div>
-            <div>
-				<p>Introduzca su nombre de usuario</p> <input class="inpt" type="text" name="user" placeholder="">
-            </div>
-			
-			</BR>
-			
-            <div>
-				<p>Introduzca su password</p> <input class="inpt" type="password" name="password" placeholder="">
-            </div>
-            </BR>
-			<div><input class="inpt" type="submit" value="Entrar"></div>
-        </div>
-    </form>
-	
-	</div>
-	
-		<p class="regit">¿No estas registrado aún? Pulsa en Registro.</p>
-        <button class="inptb" ><a href="registro.php">Registro</a></button>
-        <button class="inptb"><a href="../index.php">Inicio</a></button>
+        <section>
 		
-	</div>
+            <article>
+			
+			<div id="catalogo">
+				
+				<h3>Viajes Disponibles</h3>
+				
+				<p>A continuación, podrá ver los viajes disponibles. Cada Pack contiene tres viajes y cuatro opciones a su elección.</p>
+				
+				<p>¡Elija el que más le guste!</p>
+				
+				<h5>Pack Low Cost</h5>
+				
+				<p>Este pack contiene tres viajes disponibles: Oporto, Burgos, Málaga.</p>
+				
+				<div id="low">
+					
+					<img id="imag" src="../img/oporto.jpg">
+					
+					<img id="imag" src="../img/burgos.jpg">
+					
+					<img id="imag" src="../img/malaga.jpg">
+					
+				</div>
+				
+				<p>Podrá elegir dos de las siguientes opciones: Guía, Pensión Completa, Lugares Emblemáticos, Spa.</p>
+				
+				<h5>Pack Medium Cost</h5>
+				
+				<p>Este pack contiene 3 viajes disponibles: Venecia, Atenas, Reykjavik.</p>
+				
+				<div id="medium">
+					
+					<img id="imag" src="../img/venecia.jpg">
+					
+					<img id="imag" src="../img/atenas.jpg">
+					
+					<img id="imag" src="../img/reikjavik.jpg">
+					
+				</div>
+				
+				<p>Podrá elegir tres de las siguientes opciones: Guía, Pensión Completa, Lugares Emblemáticos, Spa.</p>
+				
+				<h5>Pack High Cost</h5>
+				
+				<p>Este pack contiene 3 viajes disponibles: Oslo, Moscú, Berlin.</p>
+				
+				<div id="high">
+					
+					<img id="imag" src="../img/olso.jpg">
+					
+					<img id="imag" src="../img/moscu.jpg">
+					
+					<img id="imag" src="../img/berlin.jpg">
+					
+				</div>
+				
+				<p>Incluidas todas las opciones disponibles: Guía, Pensión Completa, Lugares Emblemáticos, Spa.</p>
+			
+			</div>
+               
+            </article>
+			
+        </section>
+		
+    </main>
+	
 	</div>
 	
 	<footer id="fut">
@@ -114,36 +144,6 @@ if (!isset($_POST) || empty($_POST)) {
 	
 	</footer>
 	
-    </body>
-    </html>
-    <?php
+</body>
 
-}else {
-    $user=$_POST['user']; 
-    $pass=$_POST['password'];
-    include("../models/login.php");
-  $comprobar=comprobar($user,$pass,$db);
-    if($comprobar==true){
-        $DNI=dni($db,$user);
-       
-        $_SESSION['user']=$DNI;
-        $_SESSION['nombre']=$user;
-        $chat=chat($user,$db);
-    if ($chat) {
-        $fp = fopen("../views/conectados.txt",'a');
-        fwrite($fp, $user.PHP_EOL);
-        fclose($fp);   
-    }
-    header("Location:../index.php");
-}else {
-    $value="Error al logearte vuelve a intentarlo";
-    setcookie("login", $value, time()+5);
-    header("Location:login.php");
-}
-}
-}else{
-    header("Location:../index.php");
-}
-
-
-?>
+</html>

@@ -4,6 +4,7 @@
 
     <title> Travel and Time - Contactanos </title>
     <meta charset="UTF-8" name="author" content="Travel and Time">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	
@@ -19,27 +20,40 @@
 </head>
 
 <body>
-    <div class="head">
-        <header>
-            <h1>Travel and Time</h1>
-        </header>
-        <nav>
-			<div class='menu'>
-            <ul><li><a href='../index.php'>Inicio</a></li>
-            <li><a href='quienessomos.php'>Quienes Somos</a></li>
-            <li><a href='ayuda.php'>Ayuda</a></li>
-            <?php
+
+	<div id="todo">
+
+	<div class="hed">
+      
+		<nav class="navbar navbar-expand-lg navbar-light">
+		<a class="navbar-brand" href='../index.php'><img src="../img/travel.jpg"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		<div class="navbar-nav">
+		<a class="nav-item active" href='../index.php'>Inicio <span class="sr-only">(current)</span></a>
+		<a class="nav-item" href='../controllers/viajes.php'>Los Viajes</a>
+		<a class="nav-item" href='../controllers/contactanos.php'>Contactanos</a>
+		<a class="nav-item" href='../controllers/ayuda.php'>Ayuda</a>
+		 <?php
+		   //Index
            session_start();
            if(!isset($_SESSION['user'])){
-                echo " <li><a href='login.php'>Login</a></li>";
+                echo " <a class='nav-item' href='../controllers/login.php'>Login</a>";
             }else {
-                echo " <li><a href='cerrarsession.php'>Cerrar Sesion</a></li>";
+                echo " <a class='nav-item' href='../controllers/cerrarsession.php'>Cerrar Sesion</a>";
             }
            ?>
-			</ul>
-			</div>
-        </nav>
+		
+		
+		</div>
+		</div>
+		</nav>
+		
     </div>
+	
+	
     <main>
         <section>
             <article>
@@ -60,23 +74,31 @@
                  width="450px" height="400px" ></iframe>
            
                 </div>
-				
-		<div id="redes">
-		
-		<a href="https://twitter.com/" target="_blank"><img src="../img/twitter.png"></img></a>
-		<a href="https://instagram.com/" target="_blank"><img src="../img/instagram.png"></img></a>
-		<a href="https://facebook.com/" target="_blank"><img src="../img/facebook.jpg"></img></a>
-		
-		</div>
             
             </article>
         </section>
     </main>
 	
-    <footer >
+    <footer id="fut">
 	
-    </footer>
-
+		<div id="fut1">
+		
+			<p> - Realizado por <a href='index.php'>TravelandTime</a> | Copyright ©2020 -  <h6>TODOS LOS DERECHOS RESERVADOS.</h6> </p>
+			
+			<div id="redes">
+		
+			<a href="https://twitter.com/" target="_blank"><img src="../img/gorjeo.png"></img></a>
+			<a href="https://instagram.com/" target="_blank"><img src="../img/instagram.png"></img></a>
+			<a href="https://facebook.com/" target="_blank"><img src="../img/facebook.png"></img></a>
+		
+			</div>
+	
+		</div>
+	
+	</footer>
+	
+	</div>
+	
 </body>
 
 </html>
