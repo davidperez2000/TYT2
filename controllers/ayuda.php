@@ -13,8 +13,6 @@
 	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	
-	
-	
     <link rel="stylesheet" href="../estilos/index.css">
     <link rel="stylesheet" href="../estilos/ayuda.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
@@ -22,17 +20,24 @@
 </head>
 
 <body>
-    <div class="head">
-        <header>
-            <h1>Travel and Time</h1>
-        </header>
-        <nav>
-		
-			<div class='menu'>
-				<ul><li><a href='../index.php'>Inicio</a></li>
-				<li><a href='quienessomos.php'>Quienes Somos</a></li>
-                <li><a href='contactanos.php'>Contactanos</a></li>
-                <?php
+
+	<div id="todo">
+
+    <div class="hed">
+      
+		<nav class="navbar navbar-expand-lg navbar-light">
+		<a class="navbar-brand" href='../index.php'><img src="../img/travel.jpg"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		<div class="navbar-nav">
+		<a class="nav-item active" href='../index.php'>Inicio <span class="sr-only">(current)</span></a>
+		<a class="nav-item" href='../controllers/viajes.php'>Los Viajes</a>
+		<a class="nav-item" href='../controllers/contactanos.php'>Contactanos</a>
+		<a class="nav-item" href='../controllers/ayuda.php'>Ayuda</a>
+		 
+		 <?php
             include("../db/conexion.php");
             session_start();
             require_once("../models/ayuda.php");
@@ -42,11 +47,14 @@
                 echo " <li><a href='cerrarsession.php'>Cerrar Sesion</a></li>";
             }
            ?>
-			</ul>
-			</div>
 		
-        </nav>
+		
+		</div>
+		</div>
+		</nav>
+		
     </div>
+	
     <main>
         <section>
             <article>

@@ -1,50 +1,102 @@
 body {
-	
-	margin-top:5%;
-	text-align: center;
+
 	width: 100%;
-	height:80%;
+	height: 100%;
 	color: #222831;
-	font-weight:bold;
 	font-size: 16px;
-	background-image:url("../img/puedeser.jpg");
 	
 }
 
 h1{
 	
 	color: #222831;
-	font-size: 55px;
 	font-weight:bold;
+	margin-left:10%;
+	margin-top:3%;
 	
 }
 
-a {
+#contton {
 	
-	color:#222831;
-	font-weight:bold;
+	margin-top:10px;
+	margin-left:10%;
+	margin-bottom:5px;
+	
+	position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: white;
+    background-clip: border-box;
+	
+    opacity: 0.85;
+	
+	height:100%;
+	
+	background-repeat: no-repeat;
+	
+	border-radius: 5px;
+	
+	width:80%;
 	
 }
 
 #reg1 {
 	
-	float:left;
-	width: 20%;
-	margin-left:30%;
+	width: 60%;
+	margin-left:10%;
+	text-shadow: 1px 1px 3px;
 	
 }
 
-#reg2 {
+.inpb {
 	
-	float:right;
-	width: 20%;
-	margin-right:30%;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px;
+	color: #212529;
+	background-color: #ffc107;
+	font-weight:bold;
+	border:0;
+}
+
+.inpb {
+	
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px;
+	color: #212529;
+	background-color: #ffc107;
+	font-weight:bold;
+	border:0;
+}
+
+.ipt {
+	
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px;
+	margin-bottom:3%;
 	
 }
 
-#reg3 {
+.ipt a {
 	
-	float:left;
-	width: 100%;
+	color: #212529;
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
